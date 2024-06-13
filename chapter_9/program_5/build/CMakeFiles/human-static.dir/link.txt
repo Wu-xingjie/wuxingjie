@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhuman-static.a "CMakeFiles/human-object.dir/Human.cpp.o"
+/usr/bin/ranlib libhuman-static.a

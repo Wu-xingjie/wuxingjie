@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhuman.a CMakeFiles/human.dir/Human.cpp.o
+/usr/bin/ranlib libhuman.a

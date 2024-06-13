@@ -1,0 +1,3 @@
+/home/wxj/wuxingjie/chapter_9/program_10/build/CMakeFiles/program10.dir
+/home/wxj/wuxingjie/chapter_9/program_10/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/chapter_9/program_10/build/CMakeFiles/rebuild_cache.dir

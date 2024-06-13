@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/project4.dir/Human0.cpp.o -o project4  libhuman-static.a 

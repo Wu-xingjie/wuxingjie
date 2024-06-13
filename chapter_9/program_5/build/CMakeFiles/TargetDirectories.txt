@@ -1,0 +1,5 @@
+/home/wxj/wuxingjie/chapter_9/program_5/build/CMakeFiles/human-object.dir
+/home/wxj/wuxingjie/chapter_9/program_5/build/CMakeFiles/human-static.dir
+/home/wxj/wuxingjie/chapter_9/program_5/build/CMakeFiles/project4.dir
+/home/wxj/wuxingjie/chapter_9/program_5/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/chapter_9/program_5/build/CMakeFiles/rebuild_cache.dir

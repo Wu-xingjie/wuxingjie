@@ -1,0 +1,3 @@
+/home/wxj/wuxingjie/chapter_14/program_6/build/CMakeFiles/staticvalue.dir
+/home/wxj/wuxingjie/chapter_14/program_6/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/chapter_14/program_6/build/CMakeFiles/rebuild_cache.dir

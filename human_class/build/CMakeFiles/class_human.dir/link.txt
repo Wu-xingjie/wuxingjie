@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/class_human.dir/Human0.cpp.o -o class_human  libhuman.a 

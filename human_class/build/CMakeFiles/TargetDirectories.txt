@@ -1,0 +1,4 @@
+/home/wxj/wuxingjie/human_class/build/CMakeFiles/human.dir
+/home/wxj/wuxingjie/human_class/build/CMakeFiles/class_human.dir
+/home/wxj/wuxingjie/human_class/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/human_class/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/staticvalue.dir/Typestatic.o -o staticvalue 
