@@ -12,3 +12,9 @@ struct IsMultiple
         return (Divisor % divisor == 0); 
     }
 };
+
+int main()
+{
+
+    return 0;
+}
