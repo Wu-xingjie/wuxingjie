@@ -1,0 +1,3 @@
+/home/wxj/wuxingjie/chapter_22/program_1/build/CMakeFiles/lamda.dir
+/home/wxj/wuxingjie/chapter_22/program_1/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/chapter_22/program_1/build/CMakeFiles/rebuild_cache.dir
