@@ -5,6 +5,7 @@
 #include <vector>
 
 namespace civitasv{
+    namespace json{
     enum class Type{
                 JSON_NUMBER,
                 JSON_STRING,
@@ -21,10 +22,9 @@ namespace civitasv{
                 JSONObject* value_object;
                 JSONArray* value_array;
             };
-    class JsonElement;
-    using JSONObject = std::map<std::string, JsonElement*>;
-    using JSONArray = std::vector<JsonElement*>;
-    namespace json{
+        class JsonElement;
+        using JSONObject = std::map<std::string, JsonElement*>;
+        using JSONArray = std::vector<JsonElement*>;
         class JsonElement{
             private:
             Type type_;
