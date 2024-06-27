@@ -5,7 +5,9 @@
 class Human
 {
     public:
-        virtual Human* Speak() = 0;  
+        Human(std::string name, int age)
+         : _name(name), _age(age){}
+        virtual void Speak();  
 
     private:
         std::string _name;
