@@ -27,6 +27,7 @@ struct PROD
 struct ROD
 {
     int EID;
+    int PID;
     int GA;
     int GB;
     std::string CMA;
@@ -41,6 +42,7 @@ class RodTranslator
         void BDFtoJSON();
         void Show();
         ~RodTranslator();
+        
     private:
         MAT1 *_mat1;
         PROD *_prod;
