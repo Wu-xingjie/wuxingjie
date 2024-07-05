@@ -9,18 +9,19 @@ void DisplayVec(const vector<string>& bdfcontent)
     for(auto elem = bdfcontent.cbegin();
         elem != bdfcontent.cend();
         elem++)
-    {
-        cout << *elem << endl;
-    }
+        {
+            cout << *elem << endl;
+        }
 }
 
-    ostream operator<<(ostream &output, vector<string> T)
+ostream &operator<<(ostream &output, vector<string>T)
+{
+    for (int i = 0;i<T.size();i++)
     {
-        for (int i = 0;i<T.size();i++)
-        {
-            output << T[i] <<  endl;
-        }
+        output << T[i];
     }
+    return output;
+}
 
 int main()
 {
@@ -40,37 +41,43 @@ int main()
         }
         delete content_line;
 
-        //read and determine entry
+
         std::vector<std::vector<std::string>> bdf_entry;  //bdf type file
         for (auto entry : content)
         {
             int *char_count = new int(1);
-            std::vector<std::string> *vec_str = new std::vector<std::string>;
-            for (auto word = entry.cbegin();
-                word != entry.cend();
-                word++)
+            std::vector<std::string> *bdf_line = new std::vector<std::string>;
+            
+            cout << entry << endl;
+            for (auto word : entry)
                 {
+                    //cout << *word;
+                    //cout << *char_count;
                     std::string *entry_word = new std::string;
                     if (*char_count % 8 != 0)
                     {
-                        entry_word->push_back(*word);
+                        entry_word->push_back(word);
+                        //out << *entry_word;
                     }
                     else
                     {
-                        vec_str->push_back(*entry_word);
+                        entry_word->push_back(word);
+                        //bdf_line->push_back(*entry_word);
+                        //cout << *entry_word << endl;
                         delete entry_word;
-                    }                    
+                    }   
+                    *char_count += 1;                 
                 }
-            bdf_entry.push_back(*vec_str);
-            delete vec_str;
+            cout << *bdf_line << endl;
+            bdf_entry.push_back(*bdf_line);
+            delete bdf_line;
             delete char_count;
         }
-
-        for (auto elem1 = bdf_entry.begin(); elem1 != bdf_entry.end(); elem1++)
+        cout << "................" << endl;
+        for (auto elem : bdf_entry)
         {
-            cout << *elem1 << endl;
+            cout << elem << endl;
         }
-
 
     }
     else
