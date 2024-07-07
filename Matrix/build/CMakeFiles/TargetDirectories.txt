@@ -1,0 +1,4 @@
+/home/wxj/wuxingjie/Matrix/build/CMakeFiles/MATRIX_H.dir
+/home/wxj/wuxingjie/Matrix/build/CMakeFiles/main.dir
+/home/wxj/wuxingjie/Matrix/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/Matrix/build/CMakeFiles/rebuild_cache.dir
