@@ -79,7 +79,10 @@ Matrix Matrix::operator *= (const Matrix& matrix)
         }
     }    
     result.show();
-    return result;
+    this->_col = result._col;
+    this->_row = result._row;
+    this ->_matrix = result._matrix;
+    return *this;
 }
 
 void Matrix::show()
