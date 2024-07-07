@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/try.dir/try.cpp.o -o try  libvec.a 

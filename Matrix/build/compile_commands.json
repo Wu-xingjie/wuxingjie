@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/wxj/wuxingjie/Matrix/build",
+  "command": "/usr/bin/c++ -DVECTORMULTI_EXPORTS  -g -std=gnu++11 -fPIC -o CMakeFiles/VECTORMULTI.dir/src/VectorMulti.cpp.o -c /home/wxj/wuxingjie/Matrix/src/VectorMulti.cpp",
+  "file": "/home/wxj/wuxingjie/Matrix/src/VectorMulti.cpp",
+  "output": "CMakeFiles/VECTORMULTI.dir/src/VectorMulti.cpp.o"
+},
+{
+  "directory": "/home/wxj/wuxingjie/Matrix/build",
+  "command": "/usr/bin/c++ -DMATRIX_H_EXPORTS  -g -std=gnu++11 -fPIC -o CMakeFiles/MATRIX_H.dir/src/Matrix.cpp.o -c /home/wxj/wuxingjie/Matrix/src/Matrix.cpp",
+  "file": "/home/wxj/wuxingjie/Matrix/src/Matrix.cpp",
+  "output": "CMakeFiles/MATRIX_H.dir/src/Matrix.cpp.o"
+},
+{
+  "directory": "/home/wxj/wuxingjie/Matrix/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/main.dir/main.cpp.o -c /home/wxj/wuxingjie/Matrix/main.cpp",
+  "file": "/home/wxj/wuxingjie/Matrix/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

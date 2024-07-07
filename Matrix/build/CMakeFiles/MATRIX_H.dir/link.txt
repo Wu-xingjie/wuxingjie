@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,libMATRIX_H.so -o libMATRIX_H.so CMakeFiles/MATRIX_H.dir/src/Matrix.cpp.o 
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libMATRIX_H.so -o libMATRIX_H.so CMakeFiles/MATRIX_H.dir/src/Matrix.cpp.o  -Wl,-rpath,/home/wxj/wuxingjie/Matrix/build libVECTORMULTI.so 

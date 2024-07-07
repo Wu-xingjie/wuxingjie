@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvec.a CMakeFiles/vec.dir/home/wxj/wuxingjie/Matrix/src/VectorMulti.cpp.o
+/usr/bin/ranlib libvec.a

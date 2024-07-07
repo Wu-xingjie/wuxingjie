@@ -1,16 +1,20 @@
 #pragma once
 
-#include <vector>
 #include <iostream>
+#include "VectorMulti.h"
 
 typedef std::vector<std::vector<double>> MATRIX;
 
-class Matrix
+class Matrix : private VectorMulti
 {
     public:
         Matrix();
         Matrix(int row, int col);
-        MATRIX &operator+(const MATRIX &matrix_1);
+
+        Matrix operator += (const Matrix& matrix);
+        Matrix operator -= (const Matrix& matrix);
+        Matrix operator *= (const Matrix& matrix);
+
         void show();
     private:
         int _row;

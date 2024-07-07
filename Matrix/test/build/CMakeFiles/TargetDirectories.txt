@@ -1,0 +1,4 @@
+/home/wxj/wuxingjie/Matrix/test/build/CMakeFiles/vec.dir
+/home/wxj/wuxingjie/Matrix/test/build/CMakeFiles/try.dir
+/home/wxj/wuxingjie/Matrix/test/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/Matrix/test/build/CMakeFiles/rebuild_cache.dir

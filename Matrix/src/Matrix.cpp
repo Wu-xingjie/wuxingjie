@@ -14,10 +14,10 @@ Matrix::Matrix(int row, int col)
     _col = col;
 
     std::cout << "input element of this matrix:" << std::endl;
-    for(int i = 0; i< _col; i++)
+    for(int i = 0; i< col; i++)
     {
         std::vector<double> matrix_rol;
-        for(int j = 0; j < _col; j++)
+        for(int j = 0; j < col; j++)
         {
             double elem = 0;
             std::cout << "[" << i + 1 << ", " << j + 1 << "] = ";
@@ -29,22 +29,56 @@ Matrix::Matrix(int row, int col)
     }
 }
 
-MATRIX &Matrix::operator+=(const MATRIX &matrix_1)
+Matrix Matrix::operator += (const Matrix& matrix)
 {
-    MATRIX result;
-    int row_index = 0;
-    int col_index = 0;
-    for(auto row : matrix_1)
+    for (int i = 0; i < matrix._matrix.size(); i++)
     {
-        std::vector<double> result_row;
-        for (auto elem : row)
+        for (int j = 0; j < matrix._matrix.at(i).size(); j++)
         {
-            result_row.push_back(_matrix.at(row_index).at(col_index) + elem);
-            col_index++;
+            this->_matrix.at(i).at(j) += matrix._matrix.at(i).at(j);
         }
-        result.push_back(result_row);
-        row_index++;
     }
+    return *this;
+}
+
+Matrix Matrix::operator -= (const Matrix& matrix)
+{
+    for (int i = 0; i < matrix._matrix.size(); i++)
+    {
+        for (int j = 0; j < matrix._matrix.at(i).size(); j++)
+        {
+            this->_matrix.at(i).at(j) -= matrix._matrix.at(i).at(j);
+        }
+    }
+    return *this;
+}
+
+Matrix Matrix::operator *= (const Matrix& matrix)
+{
+    Matrix result;
+    result._row = this->_row;
+    result._col = matrix._col;
+    VEC init_row(result._col, 0);
+
+    result._matrix.resize(result._row, init_row);
+    for (auto elem : result._matrix)
+    {
+        elem.resize(result._col);
+    }
+
+    VEC col_multi(matrix._row);
+    for (int i = 0; i < result._row; i++)
+    {
+        for (int j = 0; j < result._col; j++)
+        {
+            for (int num = 0; num < matrix._row; num++)
+            {
+                col_multi.at(num) = matrix._matrix.at(num).at(j);
+            }
+            result._matrix.at(i).at(j) = Multi(this->_matrix.at(i), col_multi);
+        }
+    }    
+    result.show();
     return result;
 }
 

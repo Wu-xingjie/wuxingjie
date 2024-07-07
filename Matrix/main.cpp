@@ -2,10 +2,14 @@
 
 int main()
 {
-    Matrix matrix1(3,3);
-    Matrix matrix2(3,3);
-    Matrix matrix1 += matrix2;
+    Matrix matrix1(2,2);
+    matrix1.show();
 
+    Matrix matrix2(2,2);
+    matrix2.show();
+
+
+    matrix1 *= matrix2;
     matrix1.show();
 
 
