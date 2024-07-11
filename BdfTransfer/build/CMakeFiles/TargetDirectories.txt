@@ -1,0 +1,2 @@
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/edit_cache.dir
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/rebuild_cache.dir
