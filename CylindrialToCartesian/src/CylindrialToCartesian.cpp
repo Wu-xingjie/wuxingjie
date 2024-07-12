@@ -36,7 +36,27 @@ vec_double CylindralToCartesian::Transfer(const vec_double &obj_point)
 
 double CylindralToCartesian::ThetaOfVectors(const vec_double &vec1, const vec_double &vec2)
 {
+    double inner_product = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        inner_product += vec1.at(i) * vec2.at(i);
+    }
 
+    double temp_vec1 = 0;
+    for (double i = 0; i < 3; i++)
+    {
+        temp_vec1 += vec1.at(i) * vec1.at(i);
+    }
+    double vec1_abs = sqrt(temp_vec1);
+
+    double temp_vec2 = 0;
+    for (double i = 0; i < 3; i++)
+    {
+        temp_vec2 += vec2.at(i) * vec2.at(i);
+    }
+    double vec2_abs = sqrt(temp_vec2);
+    
+    return (inner_product / (vec1_abs * vec2_abs)); 
 }
 
 MATRIX CylindralToCartesian::CartesianToCartesian()
