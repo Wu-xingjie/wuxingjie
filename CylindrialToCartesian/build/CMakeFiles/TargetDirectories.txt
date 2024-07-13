@@ -1,2 +1,4 @@
+/home/wxj/wuxingjie/CylindrialToCartesian/build/CMakeFiles/head.dir
+/home/wxj/wuxingjie/CylindrialToCartesian/build/CMakeFiles/main.dir
 /home/wxj/wuxingjie/CylindrialToCartesian/build/CMakeFiles/edit_cache.dir
 /home/wxj/wuxingjie/CylindrialToCartesian/build/CMakeFiles/rebuild_cache.dir

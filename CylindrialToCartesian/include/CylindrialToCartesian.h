@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <math.h>
+#include <iostream>
 
 typedef std::vector<double> vec_double;
 typedef std::vector<std::vector<double>> MATRIX;
@@ -21,5 +22,4 @@ class CylindralToCartesian
         vec_double _vec2;
         vec_double _vec3;
         vec_double _local_point;
-
 };

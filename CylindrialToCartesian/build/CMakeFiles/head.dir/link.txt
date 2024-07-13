@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhead.a CMakeFiles/head.dir/src/CylindrialToCartesian.cpp.o
+/usr/bin/ranlib libhead.a
