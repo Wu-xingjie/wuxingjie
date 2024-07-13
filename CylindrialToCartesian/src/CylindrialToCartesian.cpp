@@ -1,29 +1,76 @@
 #include "../include/CylindrialToCartesian.h"
 
+
+std::ostream& CylindralToCartesian::operator<<(std::ostream &output)
+{
+    MATRIX VEC{_vec1, _vec2, _vec3, _local_point};
+    for (auto elem : VEC)
+    {
+        for (auto number : elem)
+        {
+            std::cout << number << ", ";
+        }
+        std::cout << std::endl;
+    }
+    return output;
+}
+
 CylindralToCartesian::CylindralToCartesian(const vec_double &G1, const vec_double &G2, const vec_double &G3)
 {
     _local_point = G1;
+
+    // for (auto elem : _local_point)
+    // {
+    //     std::cout << elem << " ";
+    // }
+    // std::cout << std::endl;
+
     for (int i = 0; i < 3; i++)
     {
-        _vec1[i] = G2[i] - G1[i];
+        _vec1.push_back(G2[i] - G1[i]);
     }
 
-    vec_double temp_vec2(3);
+    for (auto elem : _vec1)
+    {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    vec_double temp_vec2;
     for (int i = 0; i < 3; i++)
     {
-        temp_vec2[i] = G3[i] - G1[i];
+        temp_vec2.push_back(G3[i] - G1[i]);
     }
+
+    // for (auto elem : temp_vec2)
+    // {
+    //     std::cout << elem << " ";
+    // }
+    // std::cout << std::endl;
+
     _vec2 = CrossProduct(_vec1, temp_vec2);
 
+    for (auto elem : _vec2)
+    {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
     _vec3 = CrossProduct(_vec1, _vec2);
+    
+    for (auto elem : _vec3)
+    {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
 }
 
 vec_double CylindralToCartesian::CrossProduct(const vec_double &vec_1, const vec_double &vec_2)
 {
     vec_double vec_3;
-    vec_3[0] = vec_1[1]*vec_2[2]-vec_1[2]*vec_2[1];
-    vec_3[1] = vec_1[2]*vec_2[0]-vec_1[0]*vec_2[2];
-    vec_3[2] = vec_1[0]*vec_2[1]-vec_1[1]*vec_2[0];
+    vec_3.push_back(vec_1[1]*vec_2[2]-vec_1[2]*vec_2[1]);
+    vec_3.push_back(vec_1[2]*vec_2[0]-vec_1[0]*vec_2[2]);
+    vec_3.push_back(vec_1[0]*vec_2[1]-vec_1[1]*vec_2[0]);
     return vec_3;
 }
 

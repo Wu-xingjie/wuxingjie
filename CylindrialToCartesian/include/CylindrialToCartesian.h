@@ -17,6 +17,8 @@ class CylindralToCartesian
         vec_double CrossProduct(const vec_double &vec_1, const vec_double &vec_2);        
         MATRIX CartesianToCartesian();
         double InnerProduct(const vec_double &vec1, const vec_double &vec2);
+
+        std::ostream &operator<<(std::ostream &output);
     private:
         vec_double _vec1;
         vec_double _vec2;
