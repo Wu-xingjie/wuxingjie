@@ -1,18 +1,19 @@
 #include "../include/CylindrialToCartesian.h"
 
-
-std::ostream& CylindralToCartesian::operator<<(std::ostream &output)
+void CylindralToCartesian::show_vec()
 {
-    MATRIX VEC{_vec1, _vec2, _vec3, _local_point};
-    for (auto elem : VEC)
+    std::vector<std::string> vec_name{"x", "y", "z"};
+    MATRIX VEC{_vec1, _vec2, _vec3};
+    std::cout << "local coodination: " << std::endl;
+    for (int i = 0; i < 3; i++)
     {
-        for (auto number : elem)
+        std::cout << vec_name.at(i) <<": ";
+        for (int j = 0; j < 3; j++)
         {
-            std::cout << number << ", ";
+            std::cout << VEC.at(i).at(j) << " ";
         }
         std::cout << std::endl;
     }
-    return output;
 }
 
 CylindralToCartesian::CylindralToCartesian(const vec_double &G1, const vec_double &G2, const vec_double &G3)
@@ -30,11 +31,12 @@ CylindralToCartesian::CylindralToCartesian(const vec_double &G1, const vec_doubl
         _vec1.push_back(G2[i] - G1[i]);
     }
 
-    for (auto elem : _vec1)
-    {
-        std::cout << elem << " ";
-    }
-    std::cout << std::endl;
+    // std::cout << "_vec1: ";
+    // for (auto elem : _vec1)
+    // {
+    //     std::cout << elem << " ";
+    // }
+    // std::cout << std::endl;
 
     vec_double temp_vec2;
     for (int i = 0; i < 3; i++)
@@ -50,19 +52,20 @@ CylindralToCartesian::CylindralToCartesian(const vec_double &G1, const vec_doubl
 
     _vec2 = CrossProduct(_vec1, temp_vec2);
 
-    for (auto elem : _vec2)
-    {
-        std::cout << elem << " ";
-    }
-    std::cout << std::endl;
+    // std::cout << "_vec2: ";
+    // for (auto elem : _vec2)
+    // {
+    //     std::cout << elem << " ";
+    // }
+    // std::cout << std::endl;
 
     _vec3 = CrossProduct(_vec1, _vec2);
-    
-    for (auto elem : _vec3)
-    {
-        std::cout << elem << " ";
-    }
-    std::cout << std::endl;
+    // std::cout << "_vec3: ";
+    // for (auto elem : _vec3)
+    // {
+    //     std::cout << elem << " ";
+    // }
+    // std::cout << std::endl;
 }
 
 vec_double CylindralToCartesian::CrossProduct(const vec_double &vec_1, const vec_double &vec_2)
@@ -98,8 +101,7 @@ double CylindralToCartesian::ThetaOfVectors(vec_double &vec1, vec_double &vec2)
     {
         vec2.at(i) = vec2.at(i) / vec2_abs;
     }
-    
-    return asin(InnerProduct(vec1, vec2)); 
+    return acos(InnerProduct(vec1, vec2)); 
 }
 
 double CylindralToCartesian::InnerProduct(const vec_double &vec1, const vec_double &vec2)
@@ -126,11 +128,23 @@ MATRIX CylindralToCartesian::CartesianToCartesian()
         vec_double ROW;
         for (int col = 0; col < 3; col++)
         {
-            ROW.push_back(ThetaOfVectors(GlobalCoordinate.at(row), LocalCoordinate.at(col)));
+            //std::cout << ThetaOfVectors(GlobalCoordinate.at(row), LocalCoordinate.at(col)) << " ";
+             ROW.push_back(cos(ThetaOfVectors(GlobalCoordinate.at(row), LocalCoordinate.at(col))));
+            //ROW.push_back(InnerProduct(GlobalCoordinate.at(row), LocalCoordinate.at(col)));
         }
         RotationTransfer.push_back(ROW);
     }
 
+    std::cout << "transfer matrix:" << std::endl; 
+    for (auto row : RotationTransfer)
+    {
+        for (auto elem : row)
+        {
+            std::cout << elem << " ";
+        }
+        std::cout << std :: endl;
+    }
+    std::cout << std::endl;
     return RotationTransfer;
 }
 
@@ -138,9 +152,16 @@ MATRIX CylindralToCartesian::CartesianToCartesian()
 vec_double CylindralToCartesian::Transfer(const vec_double &obj_point)
 {
     vec_double local_Cartesian;
-    local_Cartesian.push_back(obj_point[0]*sin(obj_point[1]));
     local_Cartesian.push_back(obj_point[0]*cos(obj_point[1]));
+    local_Cartesian.push_back(obj_point[0]*sin(obj_point[1]));
     local_Cartesian.push_back(obj_point[2]);
+
+    std::cout << "local_Cartesian: ";
+    for (auto elem : local_Cartesian)
+    {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
 
     MATRIX RotationMatrix = CartesianToCartesian();
 
@@ -150,6 +171,12 @@ vec_double CylindralToCartesian::Transfer(const vec_double &obj_point)
         coordinate_rotation.push_back(InnerProduct(RotationMatrix.at(i), local_Cartesian));
     }
     
+    for (auto elem : coordinate_rotation)
+    {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
     vec_double result;
     for (int i = 0; i < 3; i++)
     {
