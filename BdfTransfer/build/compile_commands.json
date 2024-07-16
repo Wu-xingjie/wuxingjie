@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/wxj/wuxingjie/BdfTransfer/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/reader.dir/src/bdfReader.cpp.o -c /home/wxj/wuxingjie/BdfTransfer/src/bdfReader.cpp",
+  "file": "/home/wxj/wuxingjie/BdfTransfer/src/bdfReader.cpp",
+  "output": "CMakeFiles/reader.dir/src/bdfReader.cpp.o"
+},
+{
+  "directory": "/home/wxj/wuxingjie/BdfTransfer/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/processor.dir/src/bdfProcessor.cpp.o -c /home/wxj/wuxingjie/BdfTransfer/src/bdfProcessor.cpp",
+  "file": "/home/wxj/wuxingjie/BdfTransfer/src/bdfProcessor.cpp",
+  "output": "CMakeFiles/processor.dir/src/bdfProcessor.cpp.o"
+},
+{
+  "directory": "/home/wxj/wuxingjie/BdfTransfer/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/tranfer.dir/src/bdfTransfer.cpp.o -c /home/wxj/wuxingjie/BdfTransfer/src/bdfTransfer.cpp",
+  "file": "/home/wxj/wuxingjie/BdfTransfer/src/bdfTransfer.cpp",
+  "output": "CMakeFiles/tranfer.dir/src/bdfTransfer.cpp.o"
+},
+{
+  "directory": "/home/wxj/wuxingjie/BdfTransfer/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/main.dir/main.cpp.o -c /home/wxj/wuxingjie/BdfTransfer/main.cpp",
+  "file": "/home/wxj/wuxingjie/BdfTransfer/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

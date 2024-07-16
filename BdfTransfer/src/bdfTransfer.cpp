@@ -1,0 +1,13 @@
+#include "../include/bdfTransfer.h"
+
+void BdfTransfer::show()
+{
+    for (auto entry : _bdf_content)
+    {
+        for (auto elem : entry)
+        {
+            std::cout << elem << " ";
+        }
+        std::cout << std::endl;
+    }
+}

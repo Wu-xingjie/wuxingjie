@@ -116,6 +116,154 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named reader
+
+# Build rule for target.
+reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reader
+.PHONY : reader
+
+# fast build rule for target.
+reader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/build
+.PHONY : reader/fast
+
+#=============================================================================
+# Target rules for targets named processor
+
+# Build rule for target.
+processor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 processor
+.PHONY : processor
+
+# fast build rule for target.
+processor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/build
+.PHONY : processor/fast
+
+#=============================================================================
+# Target rules for targets named tranfer
+
+# Build rule for target.
+tranfer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tranfer
+.PHONY : tranfer
+
+# fast build rule for target.
+tranfer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/build
+.PHONY : tranfer/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+src/bdfProcessor.o: src/bdfProcessor.cpp.o
+.PHONY : src/bdfProcessor.o
+
+# target to build an object file
+src/bdfProcessor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/src/bdfProcessor.cpp.o
+.PHONY : src/bdfProcessor.cpp.o
+
+src/bdfProcessor.i: src/bdfProcessor.cpp.i
+.PHONY : src/bdfProcessor.i
+
+# target to preprocess a source file
+src/bdfProcessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/src/bdfProcessor.cpp.i
+.PHONY : src/bdfProcessor.cpp.i
+
+src/bdfProcessor.s: src/bdfProcessor.cpp.s
+.PHONY : src/bdfProcessor.s
+
+# target to generate assembly for a file
+src/bdfProcessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/src/bdfProcessor.cpp.s
+.PHONY : src/bdfProcessor.cpp.s
+
+src/bdfReader.o: src/bdfReader.cpp.o
+.PHONY : src/bdfReader.o
+
+# target to build an object file
+src/bdfReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/bdfReader.cpp.o
+.PHONY : src/bdfReader.cpp.o
+
+src/bdfReader.i: src/bdfReader.cpp.i
+.PHONY : src/bdfReader.i
+
+# target to preprocess a source file
+src/bdfReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/bdfReader.cpp.i
+.PHONY : src/bdfReader.cpp.i
+
+src/bdfReader.s: src/bdfReader.cpp.s
+.PHONY : src/bdfReader.s
+
+# target to generate assembly for a file
+src/bdfReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/bdfReader.cpp.s
+.PHONY : src/bdfReader.cpp.s
+
+src/bdfTransfer.o: src/bdfTransfer.cpp.o
+.PHONY : src/bdfTransfer.o
+
+# target to build an object file
+src/bdfTransfer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/src/bdfTransfer.cpp.o
+.PHONY : src/bdfTransfer.cpp.o
+
+src/bdfTransfer.i: src/bdfTransfer.cpp.i
+.PHONY : src/bdfTransfer.i
+
+# target to preprocess a source file
+src/bdfTransfer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/src/bdfTransfer.cpp.i
+.PHONY : src/bdfTransfer.cpp.i
+
+src/bdfTransfer.s: src/bdfTransfer.cpp.s
+.PHONY : src/bdfTransfer.s
+
+# target to generate assembly for a file
+src/bdfTransfer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/src/bdfTransfer.cpp.s
+.PHONY : src/bdfTransfer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +272,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... main"
+	@echo "... processor"
+	@echo "... reader"
+	@echo "... tranfer"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/bdfProcessor.o"
+	@echo "... src/bdfProcessor.i"
+	@echo "... src/bdfProcessor.s"
+	@echo "... src/bdfReader.o"
+	@echo "... src/bdfReader.i"
+	@echo "... src/bdfReader.s"
+	@echo "... src/bdfTransfer.o"
+	@echo "... src/bdfTransfer.i"
+	@echo "... src/bdfTransfer.s"
 .PHONY : help
 
 

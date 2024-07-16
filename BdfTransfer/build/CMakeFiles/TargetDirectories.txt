@@ -1,2 +1,6 @@
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/reader.dir
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/processor.dir
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/tranfer.dir
+/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/main.dir
 /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/edit_cache.dir
 /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles/rebuild_cache.dir

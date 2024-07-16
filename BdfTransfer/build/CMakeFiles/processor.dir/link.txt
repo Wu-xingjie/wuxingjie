@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprocessor.a CMakeFiles/processor.dir/src/bdfProcessor.cpp.o
+/usr/bin/ranlib libprocessor.a
