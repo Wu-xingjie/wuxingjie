@@ -1,5 +1,8 @@
-            for (auto a : card)
-        {
-            std::cout << a << " ";
-        }
-        std::cout << std::endl;
+    // for (auto entry : _bdf_content)
+    // {
+    //     for (auto elem : entry)
+    //     {
+    //         std::cout << elem;
+    //     }
+    //     std::cout << std::endl;
+    // }

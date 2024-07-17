@@ -24,6 +24,7 @@ class BdfTransfer : private BdfProcessor
 {
     public:
         BdfTransfer(std::string file_address): BdfProcessor(file_address){}
+        void trans();
         void show();
 
 };
@@ -32,40 +33,47 @@ BdfProcessor::BdfProcessor(std::string file_address) : BdfReader(file_address)
 {
     for (auto card : _content)
     {
-
-        //std::cout << card << " " << std::endl;
-        
+        //std::cout << card << std::endl;
         Entry temp_card;
-        int char_count = 1;
         std::string word;
-        for (auto elem : card)
-        {
-            //std::cout << elem << " ";
-            //std::cout << char_count % 9 << " ";
-            if ((char_count % 9) != 0)
+        int num_small_content = card.size() / 8;
+        int num_count = 1;
+        for (auto elem = card.cbegin();
+            elem != card.cend();
+            elem++)
+        {   
+            if (num_count <= num_small_content)
             {
-                //std::cout << char_count % 9 << " ";
-                word.push_back(elem);
-                // std::cout << word << " ";
-                char_count += 1;
+                if (word.size() < 8)
+                {
+                    word.push_back(*elem);
+                }
+                else
+                {
+                    word.push_back(*elem);
+                    temp_card.push_back(word);
+                    num_count += 1;
+
+                    word.clear();
+                }
             }
             else
-            {   
-                //std::cout << word << " ";
-
-                temp_card.push_back(word);
-                word.clear();
-                char_count += 1;
+            {
+                word.push_back(*elem);
             }
         }
-        //     for (auto a : temp_card)
-        //         {
-        //             std::cout << a << " ";
-        //         }
-        //     std::cout << std::endl;
-        //std::cout << std::endl;        
+        temp_card.push_back(word);
         _bdf_content.push_back(temp_card);
     }
+    //std::cout << std::endl;
+    // for (auto entry : _bdf_content)
+    // {
+    //     for (auto elem : entry)
+    //     {
+    //         std::cout << elem;
+    //     }
+    //     std::cout << std::endl;
+    // }
 }
 
 BdfReader::BdfReader(std::string bdf_file_address)
@@ -86,12 +94,28 @@ BdfReader::BdfReader(std::string bdf_file_address)
         std::cout << "bdf isn't open" << std::endl;
     }
     file.close();
+}
 
-    // for (auto a : _content)
-    //     {
-    //         std::cout << a << " ";
-    //     }
-    //     std::cout << std::endl;
+void BdfTransfer::trans()
+{
+    std::fstream file;
+    file.open("./BDF/result.txt", std::ios_base::out);
+    if (file.is_open())
+    {
+        for (auto entry : _bdf_content)
+        {
+            for (auto word : entry)
+            {
+                file << word;
+            }
+            file << std::endl;
+        }
+    }
+    else
+    {
+        std::cout << "file open failed" << std::endl;
+    }
+    file.close();
 }
 
 void BdfTransfer::show()
@@ -100,7 +124,7 @@ void BdfTransfer::show()
     {
         for (auto elem : entry)
         {
-            std::cout << elem << " ";
+            std::cout << elem;
         }
         std::cout << std::endl;
     }
@@ -109,6 +133,7 @@ void BdfTransfer::show()
 int main()
 {
     BdfTransfer trybdf("/home/wxj/wuxingjie/BdfTransfer/BDF/example.bdf");
-    trybdf.show();
+    //trybdf.show();
+    trybdf.trans();
     return 0;
 }
