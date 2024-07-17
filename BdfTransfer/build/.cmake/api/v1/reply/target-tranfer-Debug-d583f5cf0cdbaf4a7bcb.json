@@ -12,7 +12,7 @@
 		"commands" : 
 		[
 			"add_library",
-			"target_link_libraries"
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 12,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -44,6 +44,13 @@
 			[
 				{
 					"fragment" : "-g -std=gnu++11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/wxj/wuxingjie/BdfTransfer/src"
 				}
 			],
 			"language" : "CXX",
@@ -59,17 +66,6 @@
 			[
 				0
 			]
-		}
-	],
-	"dependencies" : 
-	[
-		{
-			"backtrace" : 2,
-			"id" : "reader::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "processor::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "tranfer::@6890427a1f51a3e7e1df",

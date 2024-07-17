@@ -110,7 +110,7 @@ CMakeFiles/reader.dir/clean:
 # Target rules for target CMakeFiles/processor.dir
 
 # All Build rule for target.
-CMakeFiles/processor.dir/all: CMakeFiles/reader.dir/all
+CMakeFiles/processor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/processor.dir/build.make CMakeFiles/processor.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles --progress-num=3,4 "Built target processor"
@@ -118,7 +118,7 @@ CMakeFiles/processor.dir/all: CMakeFiles/reader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/processor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/processor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 0
 .PHONY : CMakeFiles/processor.dir/rule
@@ -136,8 +136,7 @@ CMakeFiles/processor.dir/clean:
 # Target rules for target CMakeFiles/tranfer.dir
 
 # All Build rule for target.
-CMakeFiles/tranfer.dir/all: CMakeFiles/reader.dir/all
-CMakeFiles/tranfer.dir/all: CMakeFiles/processor.dir/all
+CMakeFiles/tranfer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tranfer.dir/build.make CMakeFiles/tranfer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles --progress-num=7,8 "Built target tranfer"
@@ -145,7 +144,7 @@ CMakeFiles/tranfer.dir/all: CMakeFiles/processor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tranfer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tranfer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 0
 .PHONY : CMakeFiles/tranfer.dir/rule
@@ -163,7 +162,8 @@ CMakeFiles/tranfer.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
+CMakeFiles/main.dir/all: CMakeFiles/reader.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/processor.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles --progress-num=1,2 "Built target main"
@@ -171,7 +171,7 @@ CMakeFiles/main.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxj/wuxingjie/BdfTransfer/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule

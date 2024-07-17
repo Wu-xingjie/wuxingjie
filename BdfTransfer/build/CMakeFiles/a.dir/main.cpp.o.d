@@ -1,4 +1,4 @@
-CMakeFiles/main.dir/main.cpp.o: /home/wxj/wuxingjie/BdfTransfer/main.cpp \
+CMakeFiles/a.dir/main.cpp.o: /home/wxj/wuxingjie/BdfTransfer/main.cpp \
  /usr/include/stdc-predef.h \
  /home/wxj/wuxingjie/BdfTransfer/./include/bdfTransfer.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/bits/requires_hosted.h \

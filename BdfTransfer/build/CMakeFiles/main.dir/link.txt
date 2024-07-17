@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/main.dir/main.cpp.o -o main  -ltransfer 
+/usr/bin/c++ -g CMakeFiles/main.dir/main.cpp.o -o main  -ltransfer libprocessor.a libreader.a 

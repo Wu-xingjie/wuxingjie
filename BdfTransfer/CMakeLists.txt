@@ -4,13 +4,15 @@ project(bdftransfer CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(reader STATIC "/home/wxj/wuxingjie/BdfTransfer/src/bdfReader.cpp")
-add_library(processor STATIC "/home/wxj/wuxingjie/BdfTransfer/src/bdfProcessor.cpp")
-add_library(tranfer STATIC "/home/wxj/wuxingjie/BdfTransfer/src/bdfTransfer.cpp")
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
-target_link_libraries(processor reader)
-target_link_libraries(tranfer processor)
+add_library(reader STATIC "./src/bdfReader.cpp")
+add_library(processor STATIC "./src/bdfProcessor.cpp")
+add_library(tranfer STATIC "./src/bdfTransfer.cpp")
+
+# target_link_libraries(processor reader)
+# target_link_libraries(tranfer processor)
 
 add_executable(main main.cpp)
 
-target_link_libraries(main transfer)
+target_link_libraries(main transfer processor reader)
