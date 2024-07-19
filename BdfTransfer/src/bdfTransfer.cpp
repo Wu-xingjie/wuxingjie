@@ -1,4 +1,4 @@
-#include "../include/bdfTransfer.h"
+#include "include/bdfTransfer.h"
 
 void BdfTransfer::show()
 {
@@ -15,7 +15,7 @@ void BdfTransfer::show()
 void BdfTransfer::trans()
 {
     std::fstream file;
-    file.open("./BDF/result.txt", std::ios_base::out);
+    file.open("/home/wxj/wuxingjie/BdfTransfer/BDF/result.txt", std::ios_base::out);
     if (file.is_open())
     {
         for (auto entry : _bdf_content)

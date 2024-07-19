@@ -3,7 +3,7 @@
 int main()
 {
     BdfTransfer trybdf("/home/wxj/wuxingjie/BdfTransfer/BDF/example.bdf");
-    trybdf.show();
+    //trybdf.show();
     trybdf.trans();
     return 0;
 }

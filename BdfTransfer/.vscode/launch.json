@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "bdfTransfer",
             "type": "cppdbg",
             "request": "launch",
-            "program": "../main.cpp",
+            "program": "/home/wxj/wuxingjie/BdfTransfer/build/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

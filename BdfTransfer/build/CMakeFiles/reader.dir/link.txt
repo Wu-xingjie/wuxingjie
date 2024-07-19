@@ -1,2 +1,0 @@
-/usr/bin/ar qc libreader.a CMakeFiles/reader.dir/src/bdfReader.cpp.o
-/usr/bin/ranlib libreader.a

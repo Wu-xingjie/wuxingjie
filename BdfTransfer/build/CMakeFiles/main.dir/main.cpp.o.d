@@ -148,8 +148,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/wxj/wuxingjie/BdfTransfer/main.cpp \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/wxj/wuxingjie/BdfTransfer/./include/../include/bdfProcessor.h \
- /home/wxj/wuxingjie/BdfTransfer/./include/../include/bdfReader.h \
+ /home/wxj/wuxingjie/BdfTransfer/include/bdfProcessor.h \
+ /home/wxj/wuxingjie/BdfTransfer/include/bdfReader.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \

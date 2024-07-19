@@ -1,4 +1,4 @@
-#include "../include/bdfReader.h"
+#include "include/bdfReader.h"
 
 #include <fstream>
 

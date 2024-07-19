@@ -1,4 +1,4 @@
-#include "../include/bdfProcessor.h"
+#include "include/bdfProcessor.h"
 
 BdfProcessor::BdfProcessor(std::string file_address) : BdfReader(file_address)
 {

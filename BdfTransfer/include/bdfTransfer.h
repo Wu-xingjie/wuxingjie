@@ -1,7 +1,7 @@
 #pragma once
 
 #include "fstream"
-#include "../include/bdfProcessor.h"
+#include "include/bdfProcessor.h"
 
 class BdfTransfer : private BdfProcessor
 {

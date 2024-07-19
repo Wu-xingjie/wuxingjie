@@ -1,6 +1,6 @@
 #pragma once
 
-#include "bdfReader.h"
+#include "include/bdfReader.h"
 
 typedef std::vector<std::string> Entry;
 
