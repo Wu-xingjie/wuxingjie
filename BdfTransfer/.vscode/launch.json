@@ -8,7 +8,7 @@
             "name": "bdfTransfer",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/wxj/wuxingjie/BdfTransfer/build/main",
+            "program": "/home/wxj/wuxingjie/BdfTransfer/build",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

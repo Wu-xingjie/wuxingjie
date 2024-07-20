@@ -168,6 +168,19 @@ transfer/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/transfer.dir/build.make src/CMakeFiles/transfer.dir/build
 .PHONY : transfer/fast
 
+#=============================================================================
+# Target rules for targets named tool
+
+# Build rule for target.
+tool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tool
+.PHONY : tool
+
+# fast build rule for target.
+tool/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/build
+.PHONY : tool/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -203,6 +216,7 @@ help:
 	@echo "... main"
 	@echo "... processor"
 	@echo "... reader"
+	@echo "... tool"
 	@echo "... transfer"
 	@echo "... main.o"
 	@echo "... main.i"

@@ -1,12 +1,9 @@
-#include "./include/bdfTransfer.h"
+#include "include/TransferTool.h"
 
 int main()
 {
-    BdfReader reader("/home/wxj/wuxingjie/BdfTransfer/BDF/example.bdf");
-    reader.Read()
-    
-    BdfProcessor processor();
-    //trybdf.show();
-    trybdf.trans();
+    TransferTool bdftransfer("/home/wxj/wuxingjie/BdfTransfer/BDF/example.bdf");
+    bdftransfer.Transfer();
+
     return 0;
 }

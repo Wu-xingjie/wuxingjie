@@ -158,6 +158,44 @@ transfer/fast:
 	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/transfer.dir/build.make src/CMakeFiles/transfer.dir/build
 .PHONY : transfer/fast
 
+# Convenience name for target.
+src/CMakeFiles/tool.dir/rule:
+	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/tool.dir/rule
+.PHONY : src/CMakeFiles/tool.dir/rule
+
+# Convenience name for target.
+tool: src/CMakeFiles/tool.dir/rule
+.PHONY : tool
+
+# fast build rule for target.
+tool/fast:
+	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/build
+.PHONY : tool/fast
+
+TransferTool.o: TransferTool.cpp.o
+.PHONY : TransferTool.o
+
+# target to build an object file
+TransferTool.cpp.o:
+	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/TransferTool.cpp.o
+.PHONY : TransferTool.cpp.o
+
+TransferTool.i: TransferTool.cpp.i
+.PHONY : TransferTool.i
+
+# target to preprocess a source file
+TransferTool.cpp.i:
+	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/TransferTool.cpp.i
+.PHONY : TransferTool.cpp.i
+
+TransferTool.s: TransferTool.cpp.s
+.PHONY : TransferTool.s
+
+# target to generate assembly for a file
+TransferTool.cpp.s:
+	cd /home/wxj/wuxingjie/BdfTransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/TransferTool.cpp.s
+.PHONY : TransferTool.cpp.s
+
 bdfProcessor.o: bdfProcessor.cpp.o
 .PHONY : bdfProcessor.o
 
@@ -240,7 +278,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... processor"
 	@echo "... reader"
+	@echo "... tool"
 	@echo "... transfer"
+	@echo "... TransferTool.o"
+	@echo "... TransferTool.i"
+	@echo "... TransferTool.s"
 	@echo "... bdfProcessor.o"
 	@echo "... bdfProcessor.i"
 	@echo "... bdfProcessor.s"

@@ -4,5 +4,6 @@
 /home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/processor.dir
 /home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/reader.dir
 /home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/transfer.dir
+/home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/tool.dir
 /home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/edit_cache.dir
 /home/wxj/wuxingjie/BdfTransfer/build/src/CMakeFiles/rebuild_cache.dir
