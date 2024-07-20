@@ -2,10 +2,11 @@
 
 #include <fstream>
 
-BdfReader::BdfReader(std::string bdf_file_address)
+
+void BdfReader::Read()
 {
     std::fstream file;
-    file.open(bdf_file_address, std::ios_base::in);
+    file.open(_bdf_file_address, std::ios_base::in);
     if(file.is_open())
     {
         std::string bdf_line;
@@ -20,4 +21,9 @@ BdfReader::BdfReader(std::string bdf_file_address)
         std::cout << "bdf isn't open" << std::endl;
     }
     file.close();
+}
+
+std::vector<std::string> BdfReader::OutPut()
+{
+    return _content;
 }

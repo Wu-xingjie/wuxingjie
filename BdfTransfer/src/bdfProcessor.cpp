@@ -1,8 +1,46 @@
 #include "include/bdfProcessor.h"
 
-BdfProcessor::BdfProcessor(std::string file_address) : BdfReader(file_address)
+void BdfProcessor::RemoveBlank()
 {
-    for (auto card : _content)
+    for (auto entry = _src_content.begin();
+        entry != _src_content.end();
+        entry++)
+    {
+        bool isempty = true;
+        for (auto elem : *entry)
+        {
+            if (elem != '\0')
+            {
+                isempty = false;
+            }
+        }
+        if (isempty)
+        {
+            _src_content.erase(entry);
+        }
+    }
+}
+
+void BdfProcessor::RemoveNote()
+{
+    for (auto entry = _src_content.begin();
+        entry != _src_content.end();
+        entry++)
+    {
+        for (auto elem : *entry)
+        {
+            if(elem == '$')
+            {
+                _src_content.erase(entry);
+                break;
+            }
+        }
+    }
+}
+
+void BdfProcessor::Process()
+{    
+    for (auto card : _src_content)
     {
         Entry temp_card;
         std::string word;
@@ -36,3 +74,5 @@ BdfProcessor::BdfProcessor(std::string file_address) : BdfReader(file_address)
         _bdf_content.push_back(temp_card);
     }
 }
+
+std::vector<Entry> BdfProcessor::GetResult(){ return _bdf_content; }

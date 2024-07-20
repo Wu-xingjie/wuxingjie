@@ -2,7 +2,7 @@
 
 void BdfTransfer::show()
 {
-    for (auto entry : _bdf_content)
+    for (auto entry : _standard_bdf)
     {
         for (auto elem : entry)
         {
@@ -18,7 +18,7 @@ void BdfTransfer::trans()
     file.open("/home/wxj/wuxingjie/BdfTransfer/BDF/result.txt", std::ios_base::out);
     if (file.is_open())
     {
-        for (auto entry : _bdf_content)
+        for (auto entry : _standard_bdf)
         {
             for (auto word : entry)
             {
