@@ -12,4 +12,7 @@ add_subdirectory(src)
 
 add_executable(main main.cpp)
 
-target_link_libraries(main reader processor transfer tool)
+target_link_libraries(main reader)
+target_link_libraries(main processor)
+target_link_libraries(main transfer)
+target_link_libraries(main tool)

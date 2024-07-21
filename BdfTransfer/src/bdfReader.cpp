@@ -14,12 +14,17 @@ void BdfReader::Read()
         {
             getline(file, bdf_line);
             _content.push_back(bdf_line);
+
         }
     }
     else
     {
         std::cout << "bdf isn't open" << std::endl;
     }
+    // for (auto entry : _content)
+    // {
+    //     cout << entry << endl;
+    // }
     file.close();
 }
 

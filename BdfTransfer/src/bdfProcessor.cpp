@@ -2,22 +2,24 @@
 
 void BdfProcessor::RemoveBlank()
 {
-    for (auto entry = _src_content.begin();
-        entry != _src_content.end();
-        entry++)
+    int entry_count = 0;
+    for (auto entry : _bdf_content)
     {
         bool isempty = true;
-        for (auto elem : *entry)
+        for (auto elem : entry)
         {
-            if (elem != '\0')
+            if (!elem.empty())
             {
                 isempty = false;
+                break;
             }
         }
         if (isempty)
         {
-            _src_content.erase(entry);
+            _bdf_content.erase(_bdf_content.begin()+entry_count);
+            entry_count -= 1;
         }
+        entry_count++;
     }
 }
 
@@ -42,6 +44,8 @@ void BdfProcessor::Process()
 {    
     for (auto card : _src_content)
     {
+        // cout << card << endl;
+
         Entry temp_card;
         std::string word;
         int num_small_content = card.size() / 8;
@@ -75,4 +79,15 @@ void BdfProcessor::Process()
     }
 }
 
-std::vector<Entry> BdfProcessor::GetResult(){ return _bdf_content; }
+std::vector<Entry> BdfProcessor::GetResult()
+{
+    // for (auto entry : _bdf_content)
+    // {
+    //     for (auto elem : entry)
+    //     {
+    //         cout << elem;
+    //     }
+    //     cout << endl;
+    // }
+    return _bdf_content;
+}

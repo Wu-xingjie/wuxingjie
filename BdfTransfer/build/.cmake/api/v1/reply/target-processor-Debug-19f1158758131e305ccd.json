@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/libreader.a"
+			"path" : "src/libprocessor.a"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 4,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
@@ -47,7 +47,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-g -std=gnu++11"
 				}
 			],
 			"includes" : 
@@ -72,9 +72,9 @@
 			]
 		}
 	],
-	"id" : "reader::@145eef247bfb46b6828c",
-	"name" : "reader",
-	"nameOnDisk" : "libreader.a",
+	"id" : "processor::@145eef247bfb46b6828c",
+	"name" : "processor",
+	"nameOnDisk" : "libprocessor.a",
 	"paths" : 
 	{
 		"build" : "src",
@@ -95,7 +95,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/bdfReader.cpp",
+			"path" : "src/bdfProcessor.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
