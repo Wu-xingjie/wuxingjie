@@ -88,13 +88,14 @@ void BdfProcessor::RemoveBlank()
         entry != _src_content.end();
         entry++)
     {
-        cout << *entry << endl;
+        //cout << *entry << endl;
         bool isempty = true;
         for (auto elem : *entry)
         {
-            if (elem != '\0')
+            if (elem != '\n')
             {
                 isempty = false;
+                break;
             }
         }
         if (isempty)

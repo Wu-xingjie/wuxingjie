@@ -9,10 +9,13 @@ CEND
 $ Direct Text Input for Global Case Control Data
 TITLE = MSC.Nastran job created on 08-Jul-24 at 23:02:27
 ECHO = NONE
+
+
 SUBCASE 1
    SUBTITLE=Default
 $ Direct Text Input for this Subcase
    SPC = 2
+
    LOAD = 2
    DISPLACEMENT(SORT1,REAL)=ALL
 BEGIN BULK
@@ -21,6 +24,8 @@ MDLPRM   HDF5    0
 PARAM   PRTMAXIM YES
 $ Elements and Element Properties for region : steel-1
 PBARL    1       1               TUBE
+
+
         1.      .5
 $ Pset: "steel-1" will be imported as: "pbarl.1"
 CBAR     1       1       1       2      1.       0.      0.
