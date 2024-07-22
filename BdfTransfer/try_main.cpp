@@ -1,11 +1,12 @@
 #include <string>
-#include <vector>
+#include <list>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 using namespace std;
 
-typedef std::vector<std::string> Entry;
+typedef std::list<std::string> Entry;
 
 class BdfReader
 {
@@ -13,43 +14,36 @@ class BdfReader
         BdfReader(std::string bdf_file_address)
          : _bdf_file_address(bdf_file_address){};
         void Read();
-        std::vector<std::string> OutPut();
+        std::list<std::string> OutPut();
 
     private:
-        std::vector<std::string> _content;
+        std::list<std::string> _content;
         std::string _bdf_file_address;
 };
 class BdfProcessor
 {
     public:
         BdfProcessor(const Entry& src_content)
-        : _src_content(src_content)
-        {
-            // for (auto entry : _src_content)
-            // {
-            //     cout << entry << endl;
-            // }
-        };
-        void RemoveBlank();
+        : _src_content(src_content){};
         void RemoveNote();
         void Process();
-        std::vector<Entry> GetResult(); 
+        std::list<Entry> GetResult(); 
         
     private:
-        std::vector<std::string> _src_content;
-        std::vector<Entry> _bdf_content;
+        std::list<std::string> _src_content;
+        std::list<Entry> _bdf_content;
 };
 
 class BdfTransfer
 {
     public:
-        BdfTransfer(const std::vector<Entry>& standard_bdf)
+        BdfTransfer(const std::list<Entry>& standard_bdf)
         : _standard_bdf(standard_bdf){};
         void trans();
         void show();
 
     private:
-        std::vector<Entry> _standard_bdf;
+        std::list<Entry> _standard_bdf;
 };
 
 class TransferTool
@@ -73,91 +67,45 @@ void BdfReader::Read()
         while (file.good())
         {
             getline(file, bdf_line);
-            _content.push_back(bdf_line);
-
+            if (bdf_line != "\r")
+            {
+                bdf_line.pop_back();
+                _content.push_back(bdf_line);
+            }
         }
     }
     else
     {
         std::cout << "bdf isn't open" << std::endl;
     }
-    // for (auto entry : _content)
-    // {
-    //     cout << entry << endl;
-    // }
     file.close();
 }
 
-std::vector<std::string> BdfReader::OutPut()
+std::list<std::string> BdfReader::OutPut()
 {
     return _content;
 }
 
-void BdfProcessor::RemoveBlank()
-{
-    cout << "fack" << endl;
-    for (auto entry : _bdf_content)
-    {
-        for (auto elem : entry)
-        {
-            if (elem.empty())
-            {
-                cout << "empty";
-            }
-        }
-        cout << endl;
-    }
-    int entry_count = 0;
-    for (auto entry : _bdf_content)
-    {
-        cout << "hello " << endl;
-        bool isempty = true;
-        for (auto elem : entry)
-        {
-            if (!elem.empty())
-            {
-                cout << "have am empty line" << endl;
-                isempty = false;
-                break;
-            }
-        }
-
-        if (isempty)
-        {
-            cout << "find an empty line" << endl;
-            _bdf_content.erase(_bdf_content.begin()+entry_count);
-        }
-        else
-        {
-            cout << "have not find empty line" << endl;
-        }
-        entry_count++;
-    }
-}
 
 void BdfProcessor::RemoveNote()
 {
-    for (auto entry = _src_content.begin();
-        entry != _src_content.end();
-        entry++)
+    for (auto &entry : _src_content)
     {
-        for (auto elem : *entry)
+        int loc = entry.find('$', 0);
+        if (loc != string::npos)
         {
-            if(elem == '$')
-            {
-                _src_content.erase(entry);
-                break;
-            }
+            // cout << "[" << loc << ", " << entry.size() << "]" << endl;
+            entry.erase(loc, entry.size());
         }
     }
+    _src_content.remove("\0");
+      
 }
 
 void BdfProcessor::Process()
 {    
     for (auto card : _src_content)
     {
-        // cout << card << endl;
-
         Entry temp_card;
         std::string word;
         int num_small_content = card.size() / 8;
@@ -191,16 +139,8 @@ void BdfProcessor::Process()
     }
 }
 
-std::vector<Entry> BdfProcessor::GetResult()
+std::list<Entry> BdfProcessor::GetResult()
 {
-    // for (auto entry : _bdf_content)
-    // {
-    //     for (auto elem : entry)
-    //     {
-    //         cout << elem;
-    //     }
-    //     cout << endl;
-    // }
     return _bdf_content;
 }
 
@@ -243,26 +183,11 @@ void TransferTool::Transfer()
     BdfReader reader(_file_address);
     reader.Read();
 
-    // auto file = reader.OutPut();
-    // for (auto i : file)
-    // {
-    //     cout << i << endl;
-    // }
-
     BdfProcessor processor(reader.OutPut());
-    //processor.RemoveNote();
-    processor.RemoveBlank();
+    processor.RemoveNote();
     processor.Process();
 
     auto file_processor = processor.GetResult();
-    // for (auto i : file_processor)
-    // {
-    //     for (auto j : i)
-    //     {
-    //         cout << j;
-    //     }
-    //     cout << endl;
-    // }
     
     BdfTransfer transfer(processor.GetResult());
     transfer.trans();

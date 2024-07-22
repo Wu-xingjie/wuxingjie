@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <vector>
+#include <list>
 #include <iostream>
 
 class BdfReader
@@ -10,9 +10,9 @@ class BdfReader
         BdfReader(std::string bdf_file_address)
          : _bdf_file_address(bdf_file_address){};
         void Read();
-        std::vector<std::string> OutPut();
+        std::list<std::string> OutPut();
 
     private:
-        std::vector<std::string> _content;
+        std::list<std::string> _content;
         std::string _bdf_file_address;
 };

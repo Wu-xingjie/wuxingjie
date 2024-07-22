@@ -6,17 +6,22 @@ $ Direct Text Input for Executive Control
 $ Linear Static Analysis, Database
 
 SOL 101
-CEND
+CEND $ Linear Static Analysis, Database
 $ Direct Text Input for Global Case Control Data
 TITLE = MSC.Nastran job created on 08-Jul-24 at 23:02:27
 ECHO = NONE
 SUBCASE 1
+
+
+
    SUBTITLE=Default
 $ Direct Text Input for this Subcase
    SPC = 2
    LOAD = 2
    DISPLACEMENT(SORT1,REAL)=ALL
 BEGIN BULK
+
+
 $ Direct Text Input for Bulk Data
 MDLPRM   HDF5    0
 PARAM   PRTMAXIM YES
@@ -35,7 +40,6 @@ CBAR     8       1       8       9      1.       0.      0.
 CBAR     9       1       9       10     1.       0.      0.
 CBAR     10      1       10      11     1.       0.      0.
 $ Elements and Element Properties for region : steel-2
-111111112222222233333333444444445555555566666666777777778888888899999999
 PBARL    2       1               TUBE
         1.      .5
 $ Pset: "steel-2" will be imported as: "pbarl.2"
@@ -51,14 +55,13 @@ CBAR     19      2       20      21      0.     1.       0.
 CBAR     20      2       21      22      0.     1.       0.
 $ Referenced Material Records
 $ Material Record : steel
+
 $ Description of Material : Date: 08-Jul-24           Time: 22:51:51
 MAT1     1      2.+11           .3      100.
 $ Nodes of the Entire Model
 GRID     1               0.      0.      0.
-111111112222222233333333444444445555555566666666777777778888888899999999
 GRID*    2                              .100000001490116 0.
 *        0.
-11111111111111112222222222222222333333333333333344444444444444447777777777777777
 GRID*    3                              .200000002980232 0.
 *        0.
 GRID*    4                              .300000011920929 0.
@@ -66,6 +69,7 @@ GRID*    4                              .300000011920929 0.
 GRID*    5                              .400000005960465 0.
 *        0.
 GRID     6              .5       0.      0.
+
 GRID*    7                              .600000023841858 0.
 *        0.
 GRID*    8                              .699999988079071 0.

@@ -13,22 +13,21 @@ void BdfReader::Read()
         while (file.good())
         {
             getline(file, bdf_line);
-            _content.push_back(bdf_line);
-
+            if (bdf_line != "\r")
+            {
+                bdf_line.pop_back();
+                _content.push_back(bdf_line);
+            }
         }
     }
     else
     {
         std::cout << "bdf isn't open" << std::endl;
     }
-    // for (auto entry : _content)
-    // {
-    //     cout << entry << endl;
-    // }
     file.close();
 }
 
-std::vector<std::string> BdfReader::OutPut()
+std::list<std::string> BdfReader::OutPut()
 {
     return _content;
 }

@@ -31,5 +31,5 @@ void BdfTransfer::trans()
     {
         std::cout << "file open failed" << std::endl;
     }
-    file.close();
 }
+    
