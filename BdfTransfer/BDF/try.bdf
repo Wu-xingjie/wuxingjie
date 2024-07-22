@@ -1,9 +1,0 @@
-$ Direct Text Input for Global Case Control Data
-TITLE = MSC.Nastran job created on 08-Jul-24 at 23:02:27
-ECHO = NONE
-SUBCASE 1
-   SUBTITLE=Default
-$ Direct Text Input for this Subcase
-   SPC = 2
-   LOAD = 2
-   DISPLACEMENT(SORT1,REAL)=ALL
