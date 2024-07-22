@@ -1,9 +1,0 @@
-/home/wxj/wuxingjie/BdfTransfer/src/CMakeFiles/main.dir
-/home/wxj/wuxingjie/BdfTransfer/src/CMakeFiles/edit_cache.dir
-/home/wxj/wuxingjie/BdfTransfer/src/CMakeFiles/rebuild_cache.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/processor.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/reader.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/transfer.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/tool.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/edit_cache.dir
-/home/wxj/wuxingjie/BdfTransfer/src/src/CMakeFiles/rebuild_cache.dir

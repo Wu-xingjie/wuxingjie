@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/main.dir/main.cpp.o -o main  src/libtool.a src/libprocessor.a src/libreader.a src/libtransfer.a 
+/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o main  src/libtool.a src/libprocessor.a src/libreader.a src/libtransfer.a 
