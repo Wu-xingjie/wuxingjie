@@ -47,7 +47,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++11"
+					"fragment" : "-std=gnu++11"
 				}
 			],
 			"includes" : 
