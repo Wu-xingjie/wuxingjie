@@ -15,7 +15,7 @@ void BdfTransfer::show()
 void BdfTransfer::trans()
 {
     std::fstream file;
-    file.open("/home/wxj/wuxingjie/BdfTransfer/BDF/result.txt", std::ios_base::out);
+    file.open("/home/wxj/wuxingjie/bdftransfer/BDF/result.txt", std::ios_base::out);
     if (file.is_open())
     {
         for (auto entry : _standard_bdf)

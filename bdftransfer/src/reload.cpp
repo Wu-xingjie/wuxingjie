@@ -1,5 +1,4 @@
 #include "include/Reload.h"
-#include <vector>
 
 void Reload::reload()
 {
@@ -25,7 +24,6 @@ void Reload::reload()
     }
     file.close();
 
-    std::vector<std::vector<std::string>> init_file;
     for (auto card : result_content)
     {
         std::vector<std::string> temp_card;
@@ -57,15 +55,23 @@ void Reload::reload()
             }
         }
         temp_card.push_back(word);
-        init_file.push_back(temp_card);
-    }
+        _init_file.push_back(temp_card);
+    }    
+}
 
-    for (auto entry : init_file)
+void Reload::RemoveBlack()
+{
+    for (auto& entry : _init_file)
     {
-        for (auto elem :entry)
+        for (auto& elem : entry)
         {
-            std::cout << elem;
+            auto black = std::remove_if(elem.begin(), elem.end(), ::isspace);
+            elem.erase(black, elem.end());
+
+            if (elem == "")
+            {
+                elem = "NULL";
+            }
         }
-        std::cout << std::endl;
     }
 }
