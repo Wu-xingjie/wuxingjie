@@ -194,6 +194,32 @@ reload/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/reload.dir/build.make src/CMakeFiles/reload.dir/build
 .PHONY : reload/fast
 
+#=============================================================================
+# Target rules for targets named db
+
+# Build rule for target.
+db: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 db
+.PHONY : db
+
+# fast build rule for target.
+db/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/db.dir/build.make src/CMakeFiles/db.dir/build
+.PHONY : db/fast
+
+#=============================================================================
+# Target rules for targets named mat1
+
+# Build rule for target.
+mat1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mat1
+.PHONY : mat1
+
+# fast build rule for target.
+mat1/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/mat1.dir/build.make src/CMakeFiles/mat1.dir/build
+.PHONY : mat1/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -226,7 +252,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... db"
 	@echo "... main"
+	@echo "... mat1"
 	@echo "... processor"
 	@echo "... reader"
 	@echo "... reload"

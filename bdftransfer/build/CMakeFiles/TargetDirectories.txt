@@ -6,5 +6,7 @@
 /home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/transfer.dir
 /home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/tool.dir
 /home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/reload.dir
+/home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/db.dir
+/home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/mat1.dir
 /home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/edit_cache.dir
 /home/wxj/wuxingjie/bdftransfer/build/src/CMakeFiles/rebuild_cache.dir

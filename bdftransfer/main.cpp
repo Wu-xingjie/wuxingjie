@@ -1,5 +1,5 @@
 #include "include/Reload.h"
-#include "include/DATEMODEL/DateModel.h"
+#include "include/DateModel.h"
 
 
 int main()
@@ -8,14 +8,18 @@ int main()
     rd.reload();
     rd.RemoveBlack();
     DateModel db(rd._init_file);
+
+    db.MAT1Catch();
     db.Transfer();
     // for (auto entry : rd._init_file)
     // {
-    //     for (auto elem : entry)
+    //     if (entry[0] == "MAT1")
     //     {
-    //         std::cout << elem << ",";
+    //         for (int i = 0; i < 9; i++)
+    //         {
+    //             std::cout << entry[i] << ",";
+    //         }
     //     }
-    //     std::cout << std::endl;
     // }
 
     return 0;

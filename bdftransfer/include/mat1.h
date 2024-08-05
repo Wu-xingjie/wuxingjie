@@ -1,6 +1,6 @@
 #pragma once
 
-#include "include/card/material.h"
+#include "include/material.h"
 
 class MAT1 : public Material
 {

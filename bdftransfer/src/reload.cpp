@@ -28,7 +28,7 @@ void Reload::reload()
     {
         std::vector<std::string> temp_card;
         std::string word;
-        int num_small_content = card.size() / 8;
+        int num_small_content = card.size() / 7;
         int num_count = 1;
         for (auto elem = card.cbegin();
             elem != card.cend();
@@ -36,7 +36,7 @@ void Reload::reload()
         {   
             if (num_count <= num_small_content)
             {
-                if (word.size() < 8)
+                if (word.size() < 7)
                 {
                     word.push_back(*elem);
                 }

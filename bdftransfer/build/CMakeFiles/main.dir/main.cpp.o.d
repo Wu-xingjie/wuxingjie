@@ -167,6 +167,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/wxj/wuxingjie/bdftransfer/main.cpp \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/wxj/wuxingjie/bdftransfer/include/DATEMODEL/DateModel.h \
- /home/wxj/wuxingjie/bdftransfer/include/card/mat1.h \
- /home/wxj/wuxingjie/bdftransfer/include/card/material.h
+ /home/wxj/wuxingjie/bdftransfer/include/DateModel.h \
+ /home/wxj/wuxingjie/bdftransfer/include/mat1.h \
+ /home/wxj/wuxingjie/bdftransfer/include/material.h

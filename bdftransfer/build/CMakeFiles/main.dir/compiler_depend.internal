@@ -3,11 +3,14 @@
 
 CMakeFiles/main.dir/main.cpp.o
  /home/wxj/wuxingjie/bdftransfer/main.cpp
+ /home/wxj/wuxingjie/bdftransfer/include/DateModel.h
  /home/wxj/wuxingjie/bdftransfer/include/Reload.h
  /home/wxj/wuxingjie/bdftransfer/include/TransferTool.h
  /home/wxj/wuxingjie/bdftransfer/include/bdfProcessor.h
  /home/wxj/wuxingjie/bdftransfer/include/bdfReader.h
  /home/wxj/wuxingjie/bdftransfer/include/bdfTransfer.h
+ /home/wxj/wuxingjie/bdftransfer/include/mat1.h
+ /home/wxj/wuxingjie/bdftransfer/include/material.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

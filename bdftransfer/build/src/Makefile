@@ -186,6 +186,58 @@ reload/fast:
 	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/reload.dir/build.make src/CMakeFiles/reload.dir/build
 .PHONY : reload/fast
 
+# Convenience name for target.
+src/CMakeFiles/db.dir/rule:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/db.dir/rule
+.PHONY : src/CMakeFiles/db.dir/rule
+
+# Convenience name for target.
+db: src/CMakeFiles/db.dir/rule
+.PHONY : db
+
+# fast build rule for target.
+db/fast:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/db.dir/build.make src/CMakeFiles/db.dir/build
+.PHONY : db/fast
+
+# Convenience name for target.
+src/CMakeFiles/mat1.dir/rule:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/mat1.dir/rule
+.PHONY : src/CMakeFiles/mat1.dir/rule
+
+# Convenience name for target.
+mat1: src/CMakeFiles/mat1.dir/rule
+.PHONY : mat1
+
+# fast build rule for target.
+mat1/fast:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mat1.dir/build.make src/CMakeFiles/mat1.dir/build
+.PHONY : mat1/fast
+
+DateModel.o: DateModel.cpp.o
+.PHONY : DateModel.o
+
+# target to build an object file
+DateModel.cpp.o:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/db.dir/build.make src/CMakeFiles/db.dir/DateModel.cpp.o
+.PHONY : DateModel.cpp.o
+
+DateModel.i: DateModel.cpp.i
+.PHONY : DateModel.i
+
+# target to preprocess a source file
+DateModel.cpp.i:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/db.dir/build.make src/CMakeFiles/db.dir/DateModel.cpp.i
+.PHONY : DateModel.cpp.i
+
+DateModel.s: DateModel.cpp.s
+.PHONY : DateModel.s
+
+# target to generate assembly for a file
+DateModel.cpp.s:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/db.dir/build.make src/CMakeFiles/db.dir/DateModel.cpp.s
+.PHONY : DateModel.cpp.s
+
 TransferTool.o: TransferTool.cpp.o
 .PHONY : TransferTool.o
 
@@ -282,6 +334,30 @@ bdfTransfer.cpp.s:
 	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/transfer.dir/build.make src/CMakeFiles/transfer.dir/bdfTransfer.cpp.s
 .PHONY : bdfTransfer.cpp.s
 
+mat1.o: mat1.cpp.o
+.PHONY : mat1.o
+
+# target to build an object file
+mat1.cpp.o:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mat1.dir/build.make src/CMakeFiles/mat1.dir/mat1.cpp.o
+.PHONY : mat1.cpp.o
+
+mat1.i: mat1.cpp.i
+.PHONY : mat1.i
+
+# target to preprocess a source file
+mat1.cpp.i:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mat1.dir/build.make src/CMakeFiles/mat1.dir/mat1.cpp.i
+.PHONY : mat1.cpp.i
+
+mat1.s: mat1.cpp.s
+.PHONY : mat1.s
+
+# target to generate assembly for a file
+mat1.cpp.s:
+	cd /home/wxj/wuxingjie/bdftransfer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mat1.dir/build.make src/CMakeFiles/mat1.dir/mat1.cpp.s
+.PHONY : mat1.cpp.s
+
 reload.o: reload.cpp.o
 .PHONY : reload.o
 
@@ -314,11 +390,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... db"
+	@echo "... mat1"
 	@echo "... processor"
 	@echo "... reader"
 	@echo "... reload"
 	@echo "... tool"
 	@echo "... transfer"
+	@echo "... DateModel.o"
+	@echo "... DateModel.i"
+	@echo "... DateModel.s"
 	@echo "... TransferTool.o"
 	@echo "... TransferTool.i"
 	@echo "... TransferTool.s"
@@ -331,6 +412,9 @@ help:
 	@echo "... bdfTransfer.o"
 	@echo "... bdfTransfer.i"
 	@echo "... bdfTransfer.s"
+	@echo "... mat1.o"
+	@echo "... mat1.i"
+	@echo "... mat1.s"
 	@echo "... reload.o"
 	@echo "... reload.i"
 	@echo "... reload.s"
