@@ -169,4 +169,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/wxj/wuxingjie/bdftransfer/main.cpp \
  /usr/include/c++/13/bits/vector.tcc \
  /home/wxj/wuxingjie/bdftransfer/include/DateModel.h \
  /home/wxj/wuxingjie/bdftransfer/include/mat1.h \
- /home/wxj/wuxingjie/bdftransfer/include/material.h
+ /home/wxj/wuxingjie/bdftransfer/include/material.h \
+ /home/wxj/wuxingjie/bdftransfer/include/cbar.h \
+ /home/wxj/wuxingjie/bdftransfer/include/element.h

@@ -9,5 +9,5 @@ class Material
     public:
         Material() = default;
         ~Material() = default;
-        virtual void display() = 0;
+        virtual void MaterialDisplay() = 0;
 };

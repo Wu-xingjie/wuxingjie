@@ -16,8 +16,7 @@ class Reload
         ~Reload() = default;
         void reload();
         void RemoveBlack();
+        void LongEntry();
 
         std::vector<std::vector<std::string>> _init_file;
-
-
 };

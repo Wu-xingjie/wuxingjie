@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include "include/mat1.h"
+#include "include/cbar.h"
 
 class DateModel
 {
@@ -12,10 +13,12 @@ class DateModel
         ~DateModel() = default;
 
         void MAT1Catch();
-
-
+        void CBARCatch();
+    
         void Transfer();
 
         std::vector<MAT1> _Material_dbs;
+        std::vector<CBAR> _Element_dbs;
+
         std::vector<std::vector<std::string>> _src_file;
 };

@@ -152,4 +152,6 @@ src/CMakeFiles/db.dir/DateModel.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/wxj/wuxingjie/bdftransfer/include/cbar.h \
+ /home/wxj/wuxingjie/bdftransfer/include/element.h

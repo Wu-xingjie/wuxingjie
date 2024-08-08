@@ -63,15 +63,41 @@ void Reload::RemoveBlack()
 {
     for (auto& entry : _init_file)
     {
+        while (entry.size() != 10)
+        {
+            entry.push_back("");
+        }
+        
         for (auto& elem : entry)
         {
             auto black = std::remove_if(elem.begin(), elem.end(), ::isspace);
             elem.erase(black, elem.end());
-
             if (elem == "")
             {
                 elem = "NULL";
             }
+        }
+    }
+}
+
+void Reload::LongEntry()
+{
+    for (int i = 1; i < _init_file.size(); i++)
+    {
+        if (_init_file[i][0] == "NULL")
+        {
+            for (int j = 1 ; j < _init_file[i].size(); j++)
+            {
+                _init_file[i-1].push_back(_init_file[i][j]);
+            }
+        }
+    }
+
+    for (int i = 0; i < _init_file.size(); i++)
+    {
+        if (_init_file[i][0] == "NULL")
+        {
+            _init_file.erase(_init_file.begin()+i);
         }
     }
 }
