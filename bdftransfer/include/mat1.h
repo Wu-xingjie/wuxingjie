@@ -17,4 +17,8 @@ class MAT1 : public Material
         std::string _A;
         std::string _TREF;
         std::string _GE;
+        std::string _ST;
+        std::string _SC;
+        std::string _SS;
+        std::string _MCSID;
 };

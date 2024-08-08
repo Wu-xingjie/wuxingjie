@@ -28,6 +28,11 @@ void DateModel::MAT1Catch()
     {
         if (entry[0] == "MAT1")
         {   
+            for (int i = 0; i < 14; i++)
+            {
+                entry.push_back("NULL");
+            }
+
             MAT1 mat;
             mat._MID = entry[1];
             mat._E = entry[2];
@@ -37,6 +42,10 @@ void DateModel::MAT1Catch()
             mat._A = entry[6];
             mat._TREF = entry[7];
             mat._GE = entry[8];
+            mat._ST = entry[10];
+            mat._SC = entry[11];
+            mat._SS = entry[12];
+            mat._MCSID = entry[13];
 
             _Material_dbs.push_back(mat);
         }
