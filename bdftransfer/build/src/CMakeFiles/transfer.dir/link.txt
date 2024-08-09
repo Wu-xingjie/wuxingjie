@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtransfer.a CMakeFiles/transfer.dir/bdfTransfer.cpp.o
-/usr/bin/ranlib libtransfer.a

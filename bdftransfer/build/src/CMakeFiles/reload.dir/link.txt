@@ -1,2 +1,0 @@
-/usr/bin/ar qc libreload.a CMakeFiles/reload.dir/reload.cpp.o
-/usr/bin/ranlib libreload.a

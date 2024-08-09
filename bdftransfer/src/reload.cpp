@@ -21,7 +21,6 @@ std::vector<std::string> Reload::FileDivide(std::vector<std::string>& result_con
             begin_bulk = i; 
         }
     }
-    std::cout << sol << ", " << cend << ", " << begin_bulk << std::endl;
 
     for (int i = sol; i < cend; i++)
     {
@@ -92,7 +91,6 @@ void Reload::reload()
             {
                 result_line = "start of date file";
             }
-            std::cout << result_line << std::endl;
 
 
             result_content.push_back(result_line);
