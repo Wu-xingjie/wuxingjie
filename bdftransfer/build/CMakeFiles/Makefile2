@@ -109,11 +109,11 @@ src/clean: src/CMakeFiles/cbar.dir/clean
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
+CMakeFiles/main.dir/all: src/CMakeFiles/processor.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/reader.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/transfer.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/tool.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/reload.dir/all
-CMakeFiles/main.dir/all: src/CMakeFiles/processor.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/db.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/mat1.dir/all
 CMakeFiles/main.dir/all: src/CMakeFiles/cbar.dir/all
@@ -220,9 +220,9 @@ src/CMakeFiles/transfer.dir/clean:
 # Target rules for target src/CMakeFiles/tool.dir
 
 # All Build rule for target.
+src/CMakeFiles/tool.dir/all: src/CMakeFiles/processor.dir/all
 src/CMakeFiles/tool.dir/all: src/CMakeFiles/reader.dir/all
 src/CMakeFiles/tool.dir/all: src/CMakeFiles/transfer.dir/all
-src/CMakeFiles/tool.dir/all: src/CMakeFiles/processor.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tool.dir/build.make src/CMakeFiles/tool.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wxj/wuxingjie/bdftransfer/build/CMakeFiles --progress-num=15,16 "Built target tool"
@@ -248,10 +248,10 @@ src/CMakeFiles/tool.dir/clean:
 # Target rules for target src/CMakeFiles/reload.dir
 
 # All Build rule for target.
+src/CMakeFiles/reload.dir/all: src/CMakeFiles/processor.dir/all
 src/CMakeFiles/reload.dir/all: src/CMakeFiles/reader.dir/all
 src/CMakeFiles/reload.dir/all: src/CMakeFiles/transfer.dir/all
 src/CMakeFiles/reload.dir/all: src/CMakeFiles/tool.dir/all
-src/CMakeFiles/reload.dir/all: src/CMakeFiles/processor.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/reload.dir/build.make src/CMakeFiles/reload.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/reload.dir/build.make src/CMakeFiles/reload.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wxj/wuxingjie/bdftransfer/build/CMakeFiles --progress-num=13,14 "Built target reload"

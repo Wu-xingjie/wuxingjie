@@ -1,5 +1,58 @@
 #include "include/Reload.h"
 
+std::vector<std::string> Reload::FileDivide(std::vector<std::string>& result_content)
+{
+    int sol;
+    int cend;
+    int begin_bulk;
+
+    for (int i = 0; i < result_content.size(); i++)
+    {
+        if (result_content.at(i) == "start of execute file")
+        {
+            sol = i;
+        }
+        else if (result_content.at(i) == "end of execute file")
+        {
+            cend = i; 
+        }
+        else if (result_content.at(i) == "start of date file")
+        {
+            begin_bulk = i; 
+        }
+    }
+    std::cout << sol << ", " << cend << ", " << begin_bulk << std::endl;
+
+    for (int i = sol; i < cend; i++)
+    {
+        _execute_file.push_back(result_content.at(i));
+        if (result_content.at(i) == "start of execute file")
+        {
+            continue;
+        }
+    }
+    for (int i = cend; i < begin_bulk; i++)
+    {
+        if (result_content.at(i) == "end of execute file")
+        {
+            continue;
+        }
+        _case_file.push_back(result_content.at(i));
+    }
+
+    std::vector<std::string> init_date_file;
+    for (int i = begin_bulk; i < result_content.size() - 2; i++)
+    {
+        if (result_content.at(i) == "start of date file")
+        {
+            continue;
+        }
+        init_date_file.push_back(result_content.at(i));
+    }
+    
+    return init_date_file;   
+}
+
 void Reload::reload()
 {
     TransferTool bdftransfer("/home/wxj/wuxingjie/bdftransfer/BDF/example.bdf");
@@ -15,6 +68,33 @@ void Reload::reload()
         while (file.good())
         {
             getline(file,result_line);
+
+            std::string temp_line = result_line; 
+
+            auto black = std::remove_if(temp_line.begin(), temp_line.end(), ::isspace);
+            temp_line.erase(black, temp_line.end());
+
+            int sol = temp_line.find("SOL");
+            if (sol != std::string::npos)
+            {
+                _execute_file.push_back(temp_line);
+                result_line = "start of execute file";
+            }
+            
+            int cend = temp_line.find("CEND");
+            if (cend != std::string::npos)
+            {
+                result_line = "end of execute file";
+            }
+
+            int bulk = temp_line.find("BEGINBULK");
+            if (bulk != std::string::npos)
+            {
+                result_line = "start of date file";
+            }
+            std::cout << result_line << std::endl;
+
+
             result_content.push_back(result_line);
         }
     }
@@ -24,7 +104,9 @@ void Reload::reload()
     }
     file.close();
 
-    for (auto card : result_content)
+
+    std::vector<std::string> init_date_file = FileDivide(result_content);
+    for (auto card : init_date_file)
     {
         std::vector<std::string> temp_card;
         std::string word;
@@ -55,13 +137,13 @@ void Reload::reload()
             }
         }
         temp_card.push_back(word);
-        _init_file.push_back(temp_card);
+        _date_file.push_back(temp_card);
     }    
 }
 
 void Reload::RemoveBlack()
 {
-    for (auto& entry : _init_file)
+    for (auto& entry : _date_file)
     {
         while (entry.size() != 10)
         {
@@ -82,22 +164,22 @@ void Reload::RemoveBlack()
 
 void Reload::LongEntry()
 {
-    for (int i = 1; i < _init_file.size(); i++)
+    for (int i = 1; i < _date_file.size(); i++)
     {
-        if (_init_file[i][0] == "NULL")
+        if (_date_file[i][0] == "NULL")
         {
-            for (int j = 1 ; j < _init_file[i].size(); j++)
+            for (int j = 1 ; j < _date_file[i].size(); j++)
             {
-                _init_file[i-1].push_back(_init_file[i][j]);
+                _date_file[i-1].push_back(_date_file[i][j]);
             }
         }
     }
 
-    for (int i = 0; i < _init_file.size(); i++)
+    for (int i = 0; i < _date_file.size(); i++)
     {
-        if (_init_file[i][0] == "NULL")
+        if (_date_file[i][0] == "NULL")
         {
-            _init_file.erase(_init_file.begin()+i);
+            _date_file.erase(_date_file.begin()+i);
         }
     }
 }

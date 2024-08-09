@@ -17,6 +17,9 @@ class Reload
         void reload();
         void RemoveBlack();
         void LongEntry();
+        std::vector<std::string> FileDivide(std::vector<std::string>& result_content);
 
-        std::vector<std::vector<std::string>> _init_file;
+        std::vector<std::string> _execute_file;
+        std::vector<std::string> _case_file;
+        std::vector<std::vector<std::string>> _date_file;
 };

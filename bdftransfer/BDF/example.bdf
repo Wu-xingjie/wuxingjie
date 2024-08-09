@@ -6,6 +6,9 @@ $ Direct Text Input for Executive Control
 $ Linear Static Analysis, Database
 
 SOL 101
+TITLE = MSC.Nastran job created on 08-Jul-24 at 23:02:27
+ECHO = NONE
+SUBCASE 1
 CEND $ Linear Static Analysis, Database
 $ Direct Text Input for Global Case Control Data
 TITLE = MSC.Nastran job created on 08-Jul-24 at 23:02:27

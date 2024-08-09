@@ -6,14 +6,11 @@ using namespace std;
 
 int main()
 {
-    vector<string> a{"1324e", "4324", "4564"};
-    cout << a[1] << endl;
-    a.erase(a.begin()+1);
-    for (auto elem : a)
+    for (int i = 0; i < 0; i++)
     {
-        cout << elem << ", ";
+        cout << i << endl;
     }
-    cout << endl;
 
+    
     return 0;
 }
